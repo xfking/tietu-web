@@ -28,24 +28,52 @@ body {
   place-items: center;
 }
 
-
 #app {
   width: 100%;
   margin: 0 auto;
 }
 
-.main-box{
+.main-box {
   width: 1200px;
+  height: 100%;
   margin: 0 auto;
 }
 
-.flex{
+.flex {
   display: flex;
   align-items: center;
 }
 
-.flex_center{
+.flex_1 {
+  flex: 1;
+}
+
+.flex_center {
   justify-content: center;
+}
+
+.flex_between {
+  justify-content: space-between;
+}
+
+.f_w {
+  font-weight: 700;
+}
+
+/* 单行显示省略号 */
+.text_overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* 三行显示省略号 */
+.text_overflow_2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 @media (prefers-color-scheme: light) {
