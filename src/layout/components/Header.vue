@@ -3,11 +3,24 @@
     <div class="main-box flex flex_between">
       <div class="header_left">贴图网</div>
       <div class="flex">
-        <div class="search_box">
-          <span>请输入你想搜索的内容</span>
-          <img src="assets/cut.png" alt="" class="cut_icon" />
-          <img src="assets/search.png" alt="" class="search_icon" />
-        </div>
+        <el-popover placement="bottom" :width="600" trigger="click">
+          <template #reference>
+            <div class="search_box">
+              <span>请输入你想搜索的内容</span>
+              <el-tooltip
+                effect="dark"
+                content="以图搜图"
+                placement="left-start"
+              >
+                <img src="assets/cut.png" alt="" class="cut_icon" />
+              </el-tooltip>
+
+              <img src="assets/search.png" alt="" class="search_icon" />
+            </div>
+          </template>
+          <ComponentsSearch />
+        </el-popover>
+
         <el-popover placement="bottom" :width="180" trigger="click">
           <template #reference>
             <div class="header_user"></div>
@@ -21,8 +34,9 @@
 
 <script>
 import ComponentsUser from "./ComponentsUser.vue";
+import ComponentsSearch from "./ComponentsSearch.vue";
 export default {
-  components: { ComponentsUser },
+  components: { ComponentsUser, ComponentsSearch },
   data() {
     return {
       gridData: [

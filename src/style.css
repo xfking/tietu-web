@@ -76,6 +76,12 @@ body {
   -webkit-line-clamp: 2;
 }
 
+.el-button {
+  color: #ffffff !important;
+  border-color: #ed702d !important;
+  background-color: #ed702d !important;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

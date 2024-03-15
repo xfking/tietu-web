@@ -8,6 +8,12 @@
       </div>
     </div>
     <div class="user_button">开通会员</div>
+    <div class="list_box">
+      <div v-for="(item, index) in list" :key="index" class="list_item">
+        {{ item.title }}
+      </div>
+    </div>
+    <div class="layout_but">退出登录</div>
   </div>
 </template>
 
@@ -19,6 +25,20 @@ export default {
         name: "贴图",
         id: "14523654",
       },
+      list: [
+        {
+          title: "我的收益",
+          url: "",
+        },
+        {
+          title: "我的收藏",
+          url: "",
+        },
+        {
+          title: "我的上传",
+          url: "",
+        },
+      ],
     };
   },
 };
@@ -51,7 +71,30 @@ export default {
   height: 32px;
   line-height: 32px;
   text-align: center;
+  color: #fff;
   background: #ed702d;
   border-radius: 3px 3px 3px 3px;
+  margin: 18px 0;
+  cursor: pointer;
+}
+
+.list_box {
+  padding: 18px 0 10px 0;
+  margin-bottom: 18px;
+  border-top: 1px solid #d6d7db;
+  border-bottom: 1px solid #d6d7db;
+}
+
+.list_item {
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.list_item:hover {
+  color: #ed702d;
+  background: rgba(237, 112, 45, 0.1);
+}
+.layout_but {
+  width: 100%;
+  cursor: pointer;
 }
 </style>
