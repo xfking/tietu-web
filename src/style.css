@@ -69,6 +69,7 @@ body {
 
 /* 单行显示省略号 */
 .text_overflow {
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -100,4 +101,9 @@ body {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+.el-card{
+  border: none !important;
 }
