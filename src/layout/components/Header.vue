@@ -1,7 +1,10 @@
 <template>
   <div class="header">
     <div class="main-box flex flex_between">
-      <div class="header_left">贴图网</div>
+      <div class="header_left">
+        <img src="assets/logo.png" alt="" style="width: 44px" />
+        贴图网
+      </div>
       <div class="flex">
         <el-popover placement="bottom" :width="600" trigger="click">
           <template #reference>
@@ -70,9 +73,11 @@ export default {
 .header {
   width: 100%;
   height: 60px;
+  padding: 0 24px;
   background: #ffffff;
   box-shadow: 0px 5px 20px 1px rgba(51, 54, 73, 0.15);
   border-radius: 3px 3px 3px 3px;
+  box-sizing: border-box;
 
   .search_box {
     width: 580px;
@@ -107,6 +112,16 @@ export default {
     background: #333649;
     border-radius: 20px 20px 20px 20px;
     margin-left: 26px;
+  }
+
+  .header_left {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+
+    img {
+      margin-right: 5px;
+    }
   }
 }
 </style>

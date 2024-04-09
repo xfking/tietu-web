@@ -34,14 +34,14 @@ body {
 }
 
 .main-box {
-  width: 1200px;
+  max-width: 1200px;
   height: 100%;
   margin: 0 auto;
 }
 
 .content_box {
-  width: 1200px;
-  height: 100%;
+  max-width: 1200px;
+  height: calc(100vh - 120px);
   margin: 0 auto;
   padding: 40px 0;
 }
@@ -103,7 +103,6 @@ body {
   }
 }
 
-
-.el-card{
+.el-card {
   border: none !important;
 }
